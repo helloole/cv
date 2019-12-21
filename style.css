@@ -1,0 +1,102 @@
+* {box-sizing: border-box;}
+html {font-size: 10px;}
+/*@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto&display=swap');не сработало, пришлось через link*/
+@font-face {
+    font-family: 'montserratregular';
+    src: url('./fonts/montserrat-regular.woff2') format('woff2'),/*правила не срабатывают для кирилицы, хотя в данном шрифте она есть*/
+         url('./fonts/montserrat-regular.woff') format('woff'),
+         url('./fonts/montserrat-regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #0e0d0c;
+    font-family: 'Roboto', Tahoma, sans-serif;
+    background:
+    repeating-linear-gradient(60deg,
+    rgb(240, 142, 207) 3em, #F1B6A8 4em,
+    #FFEFD7 4em, #FFEFD7 5em),
+    repeating-linear-gradient(-60deg,
+    #E7F0ED 0em, #E7F0ED 1em,
+    #D8BBB5 1em, #D8BBB5 2em);
+    background-blend-mode:soft-light;  
+}
+img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE 6-9 */
+  }
+h1 {
+    margin-bottom: 0px;
+    font-size: 2rem;
+}
+h2 {
+    margin-top: 5px; 
+    font-size: 1.4rem; 
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.myphoto{
+    height: 250px;
+    float: left;
+    margin-right: 30px;
+}
+.empty {
+    width: 50px;
+    float: left;
+    height: 100%;/*Почему то не выполняется*/
+    /*border: 1px solid #fff;*/
+}
+.content{
+    font-size: 1.4rem;
+    list-style: circle;
+    width: calc(100% - 65px);
+    border-left: 1px solid rgb(34, 33, 33);
+    float: right;
+    padding-left: 20px;
+}
+.content hr {margin-bottom: 15px;}
+
+.justnotes {
+    font-style: italic;
+}
+
+.justnotes p {font-family: 'montserratregular';}
+
+.prim_item {
+    margin-bottom:0;
+    width: 100px;
+    display: inline-flex;
+    padding: 0 5px;
+    border: 1px solid #000;
+    box-sizing: content-box;
+    -webkit-transform: rotate(-90deg); // разворот элемента для разных бразуеров
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    border-radius: 0 15px 0 0;
+}
+
+.prim_item__title {
+    clear: both;
+}
+.prim_item:first-child {
+    background-image: url(pic/fon1.png);
+}
+
+.prim_item:nth-child(2) {
+    background-image: url(pic/fon2.png);
+    color: #fff;
+}
+
+.nametitle {
+    padding: 7px;
+    margin-bottom:10px;
+    border-radius: 14px;
+    background-color: #fff8;
+}
